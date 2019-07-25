@@ -1,1 +1,63 @@
-Verifying github pages setup
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+  <<link rel="stylesheet" href="css/style.css">
+</head>
+</head>
+<body>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" data-interval="false" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <script>
+  $('.carousel').carousel({
+	  interval: 2000
+  })
+  </script>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" id="scene1">
+    	<!-- SCENE 1 -->
+    	<script src="scenes/scene-1.js"></script>
+    </div>
+
+    <div class="item" id="scene2">
+    	<!-- SCENE 2 -->
+    	<script src="scenes/scene-2.js"></script>
+    </div>
+
+    <div class="item" id="scene3">
+    	<!-- SCENE 3 -->
+    	<script src="scenes/scene-3.js"></script>
+    </div>
+
+     <div class="item" id="scene4">
+    	<!-- SCENE 4 -->
+    	<script src="scenes/scene-4.js"></script>
+    </div>
+
+  </div>
+
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+</body>
+</html>
