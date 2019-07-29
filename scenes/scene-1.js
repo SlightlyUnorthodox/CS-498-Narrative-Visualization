@@ -9,7 +9,38 @@ dataset = {
 {'Publisher':'SquareSoft','Games':1,'Sales':1.4}
     ]};
 
-var diameter = 600;
+var tooltip = d3.select("#scene1")
+.append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
+  .style("background-color", "black")
+  .style("border-radius", "5px")
+  .style("padding", "10px")
+  .style("color", "white")
+
+var showTooltip = function(d) {
+tooltip
+  .transition()
+  .duration(200)
+tooltip
+  .style("opacity", 1)
+  .html("Publisher: " + d.data.Publisher + "<br/>Games: " + d.data.Games + "<br/>Sales (Millions of Copies): " + d.data.Sales)
+  .style("left", (d3.mouse(this)[0]) + "px")
+  .style("top", (d3.mouse(this)[1]) + "px")
+}
+var moveTooltip = function(d) {
+tooltip
+  .style("left", (d3.mouse(this)[0]) + "px")
+  .style("top", (d3.mouse(this)[1]) + "px")
+}
+var hideTooltip = function(d) {
+tooltip
+  .transition()
+  .duration(200)
+  .style("opacity", 0)
+}
+
+var diameter = 1000;
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
 var bubble = d3.pack(dataset)
@@ -21,7 +52,7 @@ var svg = d3.select("#scene1")
     .attr("width", diameter)
     .attr("height", diameter)
     .attr("class", "bubble");
-
+    
 var nodes = d3.hierarchy(dataset)
     .sum(function(d) { return d.Sales; });
 
@@ -33,6 +64,9 @@ var node = svg.selectAll(".node")
     })
     .append("g")
     .attr("class", "node")
+    .on("mouseover", showTooltip)
+    .on("mousemove", moveTooltip)
+    .on("mouseleave", hideTooltip)
     .attr("transform", function(d) {
         return "translate(" + d.x + "," + d.y + ")";
     });
@@ -76,3 +110,4 @@ node.append("text")
 
 d3.select(self.frameElement)
     .style("height", diameter + "px");
+

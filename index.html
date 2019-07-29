@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <meta charset="utf-8">
   <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
-  <<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 </head>
 <body>
@@ -25,30 +25,55 @@
 
   <script>
   $('.carousel').carousel({
-	  interval: 2000
+	  interval: 99999
   })
   </script>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active" id="scene1">
-    	<!-- SCENE 1 -->
-    	<script src="scenes/scene-1.js"></script>
+  <div class="carousel-inner bg-info" role="listbox">
+    <div class="item active">
+      <div class="d-flex align-items-center justify-content-center min-vh-100"  id="scene1">
+      <!-- SCENE 1 -->
+        <h3>The Video Game Industry (1990)</h3>
+        <p>This is the opening text</p>
+        <p>Data provided courtesy of Kaggle (<a href="https://www.kaggle.com/gregorut/videogamesales/">Video Game Sales Data)</a>.</p>
+        <p>Sales in 1990 exceeded <strong>49 million copies.</strong>
+        <script src="scenes/scene-1.js"></script>
+      </div>
+
     </div>
 
     <div class="item" id="scene2">
     	<!-- SCENE 2 -->
-    	<script src="scenes/scene-2.js"></script>
+    	<div class="d-flex align-items-center justify-content-center min-vh-100">
+      <!-- SCENE 1 -->
+        <h3>The Video Game Industry (2000)</h3>
+        <p>This is the opening text</p>
+        <p>Sales in 2000 exceeded <strong>201 million copies.</strong>
+        <script src="scenes/scene-2.js"></script>
+      </div>
     </div>
 
     <div class="item" id="scene3">
     	<!-- SCENE 3 -->
-    	<script src="scenes/scene-3.js"></script>
+    	<div class="d-flex align-items-center justify-content-center min-vh-100">
+      <!-- SCENE 1 -->
+        <h3>The Video Game Industry (2010)</h3>
+        <p>This is the opening text</p>
+        <br/>
+        <p>Sales in 2010 exceeded <strong>600 million copies.</strong>
+        <script src="scenes/scene-3.js"></script>
+      </div>
     </div>
 
      <div class="item" id="scene4">
     	<!-- SCENE 4 -->
-    	<script src="scenes/scene-4.js"></script>
+    	<div class="d-flex align-items-center justify-content-center min-vh-100">
+      <!-- SCENE 1 -->
+        <h3>The Video Game Industry (1980-2016)</h3>
+        <p>This is the opening text</p>
+        <script src="scenes/scene-4.js"></script>
+      </div>
     </div>
 
   </div>
