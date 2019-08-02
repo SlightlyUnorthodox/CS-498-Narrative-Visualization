@@ -40,6 +40,8 @@ tooltip
   .style("opacity", 0)
 }
 
+const type = d3.annotationLabel
+
 var diameter = 500;
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
@@ -51,8 +53,8 @@ var svg = d3.select("#scene1")
     .append("svg")
     .attr("width", diameter)
     .attr("height", diameter)
-    .attr("class", "bubble");
-    
+    .attr("class", "bubble")
+
 var nodes = d3.hierarchy(dataset)
     .sum(function(d) { return d.Sales; });
 
@@ -73,7 +75,7 @@ var node = svg.selectAll(".node")
 
 node.append("title")
     .text(function(d) {
-        return d.Publisher + ": " + d.Sales;
+        return d.data.Publisher + ": " + d.data.Sales;
     });
 
 node.append("circle")
@@ -110,4 +112,3 @@ node.append("text")
 
 d3.select(self.frameElement)
     .style("height", diameter + "px");
-

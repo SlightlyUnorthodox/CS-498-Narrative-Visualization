@@ -127,7 +127,7 @@ var node = svg.selectAll(".node")
 
 node.append("title")
     .text(function(d) {
-        return d.Publisher + ": " + d.Sales;
+        return d.data.Publisher + ": " + d.data.Sales;
     });
 
 node.append("circle")

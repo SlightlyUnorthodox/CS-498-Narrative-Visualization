@@ -2392,7 +2392,7 @@ var node = svg.selectAll(".node")
 
 node.append("title")
     .text(function(d) {
-        return d.Publisher + ": " + d.Sales;
+        return d.data.Year + " - " + d.data.Publisher + ": " + d.data.Sales;
     });
 
 node.append("circle")
@@ -2402,6 +2402,18 @@ node.append("circle")
     .style("fill", function(d,i) {
         return color(i);
     });
+
+node.append("text")
+    .attr("dy", ".2em")
+    .style("text-anchor", "middle")
+    .text(function(d) {
+        return d.data.Year.substring(0, d.r / 3);
+    })
+    .attr("font-family", "sans-serif")
+    .attr("font-size", function(d){
+        return d.r/5;
+    })
+    .attr("fill", "white");
 
 node.append("text")
     .attr("dy", ".2em")
