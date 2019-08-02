@@ -4,85 +4,98 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 </head>
 <body>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" data-interval="false" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-  </ol>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Growth of the Video Game Industry</a>
+  </div>
+</nav>
 
-  <script>
-  $('.carousel').carousel({
-	  interval: 99999
-  })
-  </script>
+<header>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner bg-info" role="listbox">
-    <div class="item active">
-      <div class="d-flex align-items-center justify-content-center min-vh-100"  id="scene1">
-      <!-- SCENE 1 -->
-        <h3>The Video Game Industry (1990)</h3>
-        <p>This is the opening text</p>
-        <p>Data provided courtesy of Kaggle (<a href="https://www.kaggle.com/gregorut/videogamesales/">Video Game Sales Data)</a>.</p>
-        <p>Sales in 1990 exceeded <strong>49 million copies.</strong>
-        <script src="scenes/scene-1.js"></script>
+    <script>
+    $('.carousel').carousel({
+      interval: 99999
+    })
+    </script>
+
+    <div class="carousel-inner" role="listbox">
+      <!-- SLIDE ONE -->
+      <div class="carousel-item active" style="background-image: url('images/abstract-background.jpg')">
+        <div class="carousel-caption d-none d-md-block" id="scene1">
+          <div class="chart">
+            <script src="scenes/scene-1.js"></script>
+          </div>
+          <h2 class="display-4">The Video Game Industry (1990)</h2>
+          <p class="lead">
+            <p class="content">While the video game industry had been around for a number of years at this point, it was still fairly young in 1990. As seen here, Nintendo was overwhelmingly dominate with little in the way of real competition. Having sold more than 35 million games that year, it more than doubled the sales of the rest of the industry combined.</p>
+            <p>Data provided courtesy of Kaggle (<a href="https://www.kaggle.com/gregorut/videogamesales/">Video Game Sales Data</a>).</p>
+            <p>Sales in 1990 exceeded <strong>49 million copies.</strong></p>
+          </p>
+        </div>
+      </div>
+
+      <!-- SLIDE TWO -->
+      <div class="carousel-item" style="background-image: url('images/abstract-background.jpg')">
+        <div class="carousel-caption d-none d-md-block" id="scene2">
+          <div class="chart">
+            <script src="scenes/scene-2.js"></script>
+          </div>
+          <h2 class="display-4">The Video Game Industry (2000)</h2>
+          <p class="lead">
+            <p class="content">By the turn of the century, the industry was fiercely competitive and roughly four times the size it had been a decade prior. While Nintendo still led the pack, serious competitors in the form of Sony, Electronic Arts, and others had carved out their own space in the market.</p>
+            <p>Sales in 2000 exceeded <strong>201 million copies.</strong></p>
+          </p>
+        </div>
+      </div>
+
+      <!-- SLIDE THREE -->
+      <div class="carousel-item" style="background-image: url('images/abstract-background.jpg')">
+        <div class="carousel-caption d-none d-md-block" id="scene3">
+          <div class="chart">
+            <script src="scenes/scene-3.js"></script>
+          </div>
+          <h2 class="display-4">The Video Game Industry (2010)</h2>
+          <p class="lead">
+            <p class="content">The picture in 2010 now reflects the modern state of the video game industry. While a number of older companies (Nintendo, Electronic Arts, Activision) maintain a historic position in the market, a large number of competitors have made the market an incredibly robust, competitive place.</p>
+            <p>Sales in 2010 exceeded <strong>600 million copies.</strong></p>
+          </p>
+        </div>
+      </div>
+
+            <!-- SLIDE FOUR -->
+      <div class="carousel-item" style="background-image: url('images/abstract-background.jpg')">
+        <div class="carousel-caption d-none d-md-block" id="scene4">
+          <div class="chart">
+            <script src="scenes/scene-4.js"></script>
+          </div>
+          <h2 class="display-4">The Video Game Industry (1980-2016)</h2>
+          <p class="lead">
+            <p class="content">While one company may dominate sales in one year, the rapid growth and change of the video game industry means quite a lot may var year-to-year. Take the opportunity to see these companie's sales performance from 1980 through to 2016.</p>
+          </p>
+        </div>
       </div>
 
     </div>
 
-    <div class="item" id="scene2">
-    	<!-- SCENE 2 -->
-    	<div class="d-flex align-items-center justify-content-center min-vh-100">
-      <!-- SCENE 1 -->
-        <h3>The Video Game Industry (2000)</h3>
-        <p>This is the opening text</p>
-        <p>Sales in 2000 exceeded <strong>201 million copies.</strong>
-        <script src="scenes/scene-2.js"></script>
-      </div>
-    </div>
-
-    <div class="item" id="scene3">
-    	<!-- SCENE 3 -->
-    	<div class="d-flex align-items-center justify-content-center min-vh-100">
-      <!-- SCENE 1 -->
-        <h3>The Video Game Industry (2010)</h3>
-        <p>This is the opening text</p>
-        <br/>
-        <p>Sales in 2010 exceeded <strong>600 million copies.</strong>
-        <script src="scenes/scene-3.js"></script>
-      </div>
-    </div>
-
-     <div class="item" id="scene4">
-    	<!-- SCENE 4 -->
-    	<div class="d-flex align-items-center justify-content-center min-vh-100">
-      <!-- SCENE 1 -->
-        <h3>The Video Game Industry (1980-2016)</h3>
-        <p>This is the opening text</p>
-        <script src="scenes/scene-4.js"></script>
-      </div>
-    </div>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
 
   </div>
-
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+</header>
 
 </body>
 </html>

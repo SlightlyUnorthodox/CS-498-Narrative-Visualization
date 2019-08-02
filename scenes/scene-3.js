@@ -145,7 +145,7 @@ dataset = {
 {'Publisher':'Zoo Games','Games':12,'Sales':1.1}
     ]};
 
-var tooltip = d3.select("#scene1")
+var tooltip3 = d3.select("#scene3")
 .append("div")
   .style("opacity", 0)
   .attr("class", "tooltip")
@@ -154,29 +154,30 @@ var tooltip = d3.select("#scene1")
   .style("padding", "10px")
   .style("color", "white")
 
-var showTooltip = function(d) {
-tooltip
+var showTooltip3 = function(d) {
+tooltip3
   .transition()
   .duration(200)
-tooltip
+tooltip3
   .style("opacity", 1)
   .html("Publisher: " + d.data.Publisher + "<br/>Games: " + d.data.Games + "<br/>Sales (Millions of Copies): " + d.data.Sales)
-  .style("left", (d3.mouse(this)[0]+100) + "px")
-  .style("top", (d3.mouse(this)[1]+100) + "px")
+  .style("left", (d3.mouse(this)[0]) + "px")
+  .style("top", (d3.mouse(this)[1]) + "px")
 }
-var moveTooltip = function(d) {
-tooltip
-  .style("left", (d3.mouse(this)[0]+100) + "px")
-  .style("top", (d3.mouse(this)[1]+100) + "px")
+var moveTooltip3 = function(d) {
+tooltip3
+  .style("left", (d3.mouse(this)[0]) + "px")
+  .style("top", (d3.mouse(this)[1]) + "px")
 }
-var hideTooltip = function(d) {
-tooltip
+var hideTooltip3 = function(d) {
+tooltip3
   .transition()
   .duration(200)
   .style("opacity", 0)
 }
 
-var diameter = 1000;
+
+var diameter = 500;
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
 var bubble = d3.pack(dataset)
@@ -200,9 +201,9 @@ var node = svg.selectAll(".node")
     })
     .append("g")
     .attr("class", "node")
-        .on("mouseover", showTooltip)
-    .on("mousemove", moveTooltip)
-    .on("mouseleave", hideTooltip)
+        .on("mouseover", showTooltip3)
+    .on("mousemove", moveTooltip3)
+    .on("mouseleave", hideTooltip3)
     .attr("transform", function(d) {
         return "translate(" + d.x + "," + d.y + ")";
     });

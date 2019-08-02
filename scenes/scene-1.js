@@ -40,7 +40,7 @@ tooltip
   .style("opacity", 0)
 }
 
-var diameter = 1000;
+var diameter = 500;
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
 var bubble = d3.pack(dataset)
